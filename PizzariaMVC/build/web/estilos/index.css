@@ -1,0 +1,219 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+:root{
+    --var-green: #5c913b;
+    --var-red: #cf3031;
+    --var-yellow: #ffa200;
+    --var-white: #ffff;
+    --var-gray: #616161
+}
+
+body{
+    background: #f9f9f9;
+}
+
+a {
+    display: block;
+    color: #000;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+/* header */
+.header-bg{
+    background: #333;
+}
+
+.logo{
+    color: var(--var-yellow);
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu-lista {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.menu-lista a {
+    color: var(--var-white);
+    border-radius: 4px;
+    padding: 6px;
+    font-size: 1rem;
+}
+
+#create {
+    background: var(--var-green);
+}
+
+#show {
+    background: var(--var-red);
+}
+
+/* classes: cores */
+.cor-green{
+    color: var(--var-green);
+}
+
+.cor-red{
+    color: #cf3031;
+}
+
+.cor-yellow{
+    color: var(--var-yellow);
+}
+
+.cor-white{
+    color: var(--var-white);
+}
+
+.cor-gray{
+    color: var(--var-gray);
+}
+
+/* introducao */
+.introducao-bg{
+    background-color: rgba(0,0,0,0.4);
+    background-image: url(../img/capa.png);
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.introducao {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo-introducao{
+    font-size: 5rem;
+    color: var(--var-white);
+}
+
+/* vendidos */
+.vendidos{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.titulo-vendidos{
+    text-align: center;
+    font-size: 2.5rem;
+}
+
+.listaVendidos{
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.item-pizza{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.nomePizza{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.ingredientes{
+    font-size: 0.97rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.precoPizza{
+    color: #2e2e2e;
+    font-size: 2rem;
+}
+
+.btnComprar{
+    color: #333;
+    padding: 10px 25px;
+    background: var(--var-yellow);
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+}
+
+/* sobre */
+.sobre-bg{
+    padding: 40px 0;
+    background: #fcfcfc;
+}
+
+.sobre{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobreLaPizza{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.sobre-titulo {
+    font-size: 2.5rem;
+    color: #2e2e2e;
+}
+
+.sobre-paragrafo{
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: var(--var-gray);
+}
+
+#leiaMais{
+    background: var(--var-yellow);
+    font-weight: bolder;
+    padding: 10px 25px;
+    border-radius: 4px;
+}
+
+/* footer */
+.footer-bg{
+    background: #333;
+}
+
+.footer{
+    text-align: center;
+    padding: 20px;
+    font-size: 1.5rem;
+    color: var(--var-white);
+}
+
+
