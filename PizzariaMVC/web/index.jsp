@@ -1,4 +1,7 @@
 <!DOCTYPE html>
+<%@page import="java.util.List"%>
+<%@page import="Models.PizzaModel"%>
+<%@page import="Controllers.*" %>
 <html lang="pt-BR">
 
     <head>
@@ -9,6 +12,13 @@
     </head>
 
     <body>
+        <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+        <%
+            List<PizzaModel> listPizzas = PizzaController.getAllPizzas();
+            request.setAttribute("listPizzas", listPizzas);
+        %>
+
         <header class="header-bg">
             <div class="header container">
                 <h2 class="logo">La pizza</h2>
@@ -89,6 +99,18 @@
                         <h2 class="precoPizza">R$ 23</h2>
                         <button class="btnComprar" type="button">Comprar Agora</button>
                     </li>
+
+                    <c:forEach items="${listPizzas}" var="Pizza">
+                        <li class="item-pizza">
+                            <% 
+                                out.write("<img src='img/pizza1.svg'" );
+                            %>
+                            <h3 class="nomePizza">${Pizza.getNomePizza()}</h3>
+                            <p class="ingredientes cor-gray">${Pizza.getIngredientesPizza()}</p>
+                            <h2 class="precoPizza">R$ ${Pizza.getPrecoPizza()}</h2>
+                            <button class="btnComprar" type="button">Comprar Agora</button>
+                        </li>
+                    </c:forEach>
                 </ul>
             </div>
         </section>

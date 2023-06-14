@@ -39,11 +39,12 @@ public class PizzaController {
 //Atributos do banco, rS.getInt("id_user"), pega o resultado do banco e transforma em inteiro;
 //O que está dentro do get.Int("NOME DO ATRIBUTO NO BANCO") Tem que ser igual o nome que está no banco de dados.
                 int id = rS.getInt("id_pizza");
+                String imgPizza = rS.getString("imagem_pizza");
                 String name = rS.getString("nome_pizza");
                 String ingredientes = rS.getString("ingrediente_pizza");
                 int precoPizza = rS.getInt("precoPizza");
 //Criando um novo usuario a partir dos valores no banco
-                PizzaModel pizza = new PizzaModel(id, name, ingredientes, precoPizza);
+                PizzaModel pizza = new PizzaModel(id, imgPizza, name, ingredientes, precoPizza);
 //Adicionando na nossa lista de usuarios
                 pizzaList.add(pizza);
             }
@@ -78,10 +79,11 @@ public class PizzaController {
 //Atributos do banco, rS.getInt("id_user"), pega o resultado do banco e transforma em inteiro;
 //O que está dentro do get.Int("NOME DO ATRIBUTO NO BANCO") Tem que ser igual o nome que está no banco de dados.
                 String name = rS.getString("nome_pizza");
+                String imgProduto = rS.getString("imagem_pizza");
                 String ingredientes = rS.getString("ingrediente_pizza");
                 int precoPizza = rS.getInt("precoPizza");
 //Criando um novo usuario a partir dos valores no banco
-                pizza = new PizzaModel(id, name, ingredientes, precoPizza);
+                pizza = new PizzaModel(id, imgProduto, name, ingredientes, precoPizza);
             }
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -99,7 +101,7 @@ public class PizzaController {
         //Uma forma de você fazer uma inserção no banco mais segura, onde você prepara os parametros para serem inseridos.​
         PreparedStatement pS;
         //Comando sql para selecionar todos os usuarios do banco​
-        String sql = "UPDATE Pizzas SET nome_pizza =?, ingrediente_pizza=?, precoPizza=? WHERE id_pizza=?";
+        String sql = "UPDATE Pizzas SET nome_pizza =?, imagem_pizza=? ,ingrediente_pizza=?, precoPizza=? WHERE id_pizza=?";
 
         try {
             //Pegar conexao com o banco​
@@ -107,9 +109,10 @@ public class PizzaController {
             pS = con.prepareStatement(sql);
             //para alterar o nome o 1 é o primeiro "?", o 2 é o segundo "?" e o 3 é o terceiro "?"
             pS.setString(1, pizza.getNomePizza());
-            pS.setString(2, pizza.getIngredientesPizza());
-            pS.setInt(3, pizza.getPrecoPizza());
-            pS.setInt(4, pizza.getIdPizza());
+            pS.setString(2, pizza.getImagemPizza());
+            pS.setString(3, pizza.getIngredientesPizza());
+            pS.setInt(4, pizza.getPrecoPizza());
+            pS.setInt(5, pizza.getIdPizza());
             status = pS.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());
@@ -127,7 +130,7 @@ public class PizzaController {
         //Uma forma de você fazer uma inserção no banco mais segura, onde você prepara os parametros para serem inseridos.​
         PreparedStatement pS;
         //Comando sql para selecionar todos os usuarios do banco​
-        String sql = "INSERT INTO Pizzas (nome_pizza,ingrediente_pizza,precoPizza) VALUES (?,?,?)";
+        String sql = "INSERT INTO Pizzas (nome_pizza,imagem_pizza,ingrediente_pizza,precoPizza) VALUES (?,?,?,?)";
 
         try {
             //Pegar conexao com o banco​
@@ -135,8 +138,9 @@ public class PizzaController {
             pS = con.prepareStatement(sql);
             //para alterar o nome
             pS.setString(1, pizza.getNomePizza());
-            pS.setString(2, pizza.getIngredientesPizza());
-            pS.setInt(3, pizza.getPrecoPizza());
+            pS.setString(2, pizza.getImagemPizza());
+            pS.setString(3, pizza.getIngredientesPizza());
+            pS.setInt(4, pizza.getPrecoPizza());
             status = pS.executeUpdate();
         } catch (SQLException e) {
             System.out.println(e.getMessage());

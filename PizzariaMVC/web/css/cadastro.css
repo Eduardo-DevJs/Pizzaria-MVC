@@ -68,3 +68,14 @@ button[type="submit"]{
   border-radius: 8px;
 }
 
+select{
+  padding: 8px;
+  border: none;
+  outline: none;
+  background: #e2e2e2;
+  color: #000;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+

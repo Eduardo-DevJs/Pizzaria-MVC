@@ -33,11 +33,13 @@ public class ServletPizzaCreate extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         String nome = request.getParameter("nome");
+        String imgPizza = request.getParameter("imgPizza");
         String ingredientes = request.getParameter("ingredientes");
         int precoPizza = Integer.parseInt(request.getParameter("precoPizza"));
 // Crie um objeto UserModel com os dados recebidos
         PizzaModel pizza = new PizzaModel();
         pizza.setNomePizza(nome);
+        pizza.setImagemPizza(imgPizza);
         pizza.setIngredientesPizza(ingredientes);
         pizza.setPrecoPizza(precoPizza);
 // Chame o método no UserController para salvar o usuário no banco de dados

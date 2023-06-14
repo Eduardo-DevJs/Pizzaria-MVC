@@ -34,6 +34,7 @@ public class ServletPizzaUpdate extends HttpServlet {
             throws ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         String nome = request.getParameter("nome");
+        String imgProduto = request.getParameter("imgPizza");
         String ingredientes = request.getParameter("ingredientes");
         int precoPizza = Integer.parseInt(request.getParameter("precoPizza"));
 
@@ -42,6 +43,7 @@ public class ServletPizzaUpdate extends HttpServlet {
 
         // Atualize os detalhes do usuário
         pizza.setNomePizza(nome);
+        pizza.setImagemPizza(imgProduto);
         pizza.setIngredientesPizza(ingredientes);
         pizza.setPrecoPizza(precoPizza);
 

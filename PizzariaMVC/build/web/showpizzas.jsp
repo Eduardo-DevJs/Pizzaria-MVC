@@ -22,6 +22,7 @@
             <tr>
                 <th>ID</th>
                 <th>Nome da Pizza</th>
+                <th>Source Imagem</th>
                 <th>Descricao Pizza</th>
                 <th>Preço Pizza</th>
                 <th>Ações</th>
@@ -30,12 +31,13 @@
                 <tr>
                     <td>${Pizza.getIdPizza()}</td>
                     <td>${Pizza.getNomePizza()}</td>
+                    <td>${Pizza.getImagemPizza()}</td>
                     <td>${Pizza.getIngredientesPizza()}</td>
                     <td>${Pizza.getPrecoPizza()}</td>
 
                     <td class="acoes">
-                      <a class="edit" href="editpizza.jsp?id=${Pizza.getIdPizza()} ">EDIT</a>
-                      <a class="delete" href="deletepizza.jsp?id=${Pizza.getIdPizza()} ">DELETE</a>
+                        <a class="edit" href="editpizza.jsp?id=${Pizza.getIdPizza()} ">EDIT</a>
+                        <a class="delete" href="deletepizza.jsp?id=${Pizza.getIdPizza()} ">DELETE</a>
                     </td>
                 </tr>
             </c:forEach>

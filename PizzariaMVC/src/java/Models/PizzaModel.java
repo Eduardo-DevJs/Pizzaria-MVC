@@ -3,6 +3,7 @@ package Models;
 public class PizzaModel {
     
     private int idPizza;
+    private String imagemPizza;
     private String nomePizza;
     private String ingredientesPizza;
     private int precoPizza;
@@ -11,8 +12,9 @@ public class PizzaModel {
  
     }
     
-    public PizzaModel(int id, String nP, String iP, int pP ){
+    public PizzaModel(int id, String imP ,String nP, String iP, int pP ){
         idPizza= id;
+        imagemPizza = imP;
         nomePizza = nP;
         ingredientesPizza = iP;
         precoPizza = pP;
@@ -30,6 +32,20 @@ public class PizzaModel {
      */
     public void setIdPizza(int idPizza) {
         this.idPizza = idPizza;
+    }
+
+    /**
+     * @return the imagemPizza
+     */
+    public String getImagemPizza() {
+        return imagemPizza;
+    }
+
+    /**
+     * @param imagemPizza the imagemPizza to set
+     */
+    public void setImagemPizza(String imagemPizza) {
+        this.imagemPizza = imagemPizza;
     }
 
     /**
