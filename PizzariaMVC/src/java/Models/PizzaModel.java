@@ -17,7 +17,7 @@ public class PizzaModel {
         imagemPizza = imP;
         nomePizza = nP;
         ingredientesPizza = iP;
-        precoPizza = pP;
+        precoPizza = pP; 
     }
 
     /**
