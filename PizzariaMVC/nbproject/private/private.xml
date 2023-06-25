@@ -3,12 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/web/index.jsp</file>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/src/java/Connections/ConnectionSQL.java</file>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/web/estilos/index.css</file>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/src/java/Controllers/ServletPizzaCreate.java</file>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/src/java/Controllers/ServletPizzaDelete.java</file>
-            <file>file:/C:/Users/dudu2/Documents/NetBeansProjects/PizzariaMVC/src/java/Controllers/ServletPizzaUpdate.java</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/src/java/Controllers/ServletPizzaCreate.java</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/web/editpizza.jsp</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/src/java/Controllers/ServletPizzaUpdate.java</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/web/showpizzas.jsp</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/src/java/Models/PizzaModel.java</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/web/index.jsp</file>
+            <file>file:/C:/Users/dudu2/Desktop/Projetos%20JS/Pizzaria-MVC/PizzariaMVC/src/java/Controllers/PizzaController.java</file>
         </group>
     </open-files>
 </project-private>
